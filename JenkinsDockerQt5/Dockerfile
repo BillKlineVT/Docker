@@ -2,7 +2,10 @@ FROM jenkins/jenkins:lts
 
 USER root
 
-ENV JENKINS_OPTS -Djenkins.install.runSetupWizard=false -Dorg.apache.commons.jelly.tags.fmt.timeZone=America/Chicago
+#multiple args broken https://github.com/jenkinsci/docker/pull/194
+#ENV JENKINS_OPTS -Djenkins.install.runSetupWizard=false -Dorg.apache.commons.jelly.tags.fmt.timeZone=America/Chicago
+
+ENV JENKINS_OPTS -Dorg.apache.commons.jelly.tags.fmt.timeZone=America/Chicago
 
 RUN apt-get update && \
 apt-get -y install qt5-qmake && \
@@ -23,6 +26,7 @@ add-apt-repository \
      $(lsb_release -cs) \
      stable" && \
 apt-get update && \
-apt-get -y install docker-ce
+apt-get -y install docker-ce && \
+apt-get -y install maven
 
 USER jenkins
