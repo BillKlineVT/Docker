@@ -14,3 +14,5 @@ which has the value '/nexus-data'.
 In order to run the container, enter the following command inside this directory:
 `docker run -d -p8081:8081 <image name>`.
 
+## preferred run command w/persistent volume
+`docker run --name nexus -dit -p8081:8081 -v /data/nexus:/nexus-data billklinefelter/dsop-nexus:latest`
