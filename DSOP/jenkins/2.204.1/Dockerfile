@@ -17,9 +17,6 @@ ARG JENKINS_HOME=/var/jenkins_home
 ENV JENKINS_HOME $JENKINS_HOME
 ENV JENKINS_SLAVE_AGENT_PORT ${agent_port}
 
-#gives jenkins user permissions to access /var/run/docker.sock
-RUN usermod -a -G staff ${user}
-
 # Jenkins is run with user `jenkins`, uid = 1000
 # If you bind mount a volume from the host or a data container,
 # ensure you use the same uid
