@@ -1,0 +1,8 @@
+{
+    "image_name": "jenkins",
+    "image_tag": "2.164.3",
+    "image_parent_name": "ubi7",
+    "image_parent_tag": "7.7",
+    "whitelisted_vulnerabilities": ["CVE-IDUNNO", "CVE-MORETESTING"],
+    "report_s3": "https://dsop-pipeline-artifacts.s3-us-gov-west-1.amazonaws.com/testing/container-scan-reports/opensource/jenkins-v2.164.3/repo_map.html"
+}

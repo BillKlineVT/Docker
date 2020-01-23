@@ -1,0 +1,7 @@
+{
+    "image_name": "jenkins",
+    "image_tag": "2.214",
+    "image_parent_name": "ubi7",
+    "image_parent_tag": "7.7",
+    "whitelisted_vulnerabilities": ["CVE-IDUNNO", "CVE-MORETESTING"],
+}
