@@ -1,4 +1,4 @@
-# Jenkins v2.214
+# Jenkins v2.204.1
 
 This is derived from https://github.com/jenkinsci/docker/blob/master/Dockerfile
 

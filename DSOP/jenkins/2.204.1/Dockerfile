@@ -44,7 +44,7 @@ ARG TINI_SHA=5e01734c8b2e6429a1ebcc67e2d86d3bb0c4574dd7819a0aff2dca784580e040
 RUN curl -kfsSL https://nexus.52.61.140.4.nip.io/repository/cht/tini/release/${TINI_VERSION}/tini-static -o /sbin/tini \
   && echo "${TINI_SHA} /sbin/tini" | sha256sum -c - && chmod +x /sbin/tini
 
-ENV JENKINS_VERSION=latest
+ENV JENKINS_VERSION=2.204.1
 
 # jenkins.war checksum, download will be validated using it
 ARG JENKINS_SHA=12b9ebbf9eb1cd1deab0d11512511bcd80a5d3a754dffab54dd6385d788d5284
